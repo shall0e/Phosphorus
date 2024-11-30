@@ -8,8 +8,13 @@ export async function onRequest(context) {
         return true;
     }
 
-
-    let response = await (await fetch("https://rers.shall0e.workers.dev/"+(context.request.url).split("?")[1])).text()
+    let response;
+    if ((context.request.url).includes("?")) {
+        response = await (await fetch("https://rers.shall0e.workers.dev/?"+(context.request.url).split("?")[1])).text()
+    } else {
+        response = await (await fetch("https://rers.shall0e.workers.dev/"))
+    }
+    
     return new Response(response)
 
 }
