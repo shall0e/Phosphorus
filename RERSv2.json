@@ -1,0 +1,124 @@
+{
+    "Zorara": {
+        "UI": {
+            "script_hub": false,
+            "explorer": false,
+            "tabs": true,
+            "auto_inject": false,
+            "multiprocess": false,
+            "debug_console": false,
+            "ide": true
+        },
+        "CORE": {
+            "inject_time": 12,
+            "decompiler":  false,
+            "luarmor": true,
+            "LIB": {
+                "UNC": 88,
+                "sUNC": 41
+            }
+        },
+        "INFO": {
+            "daily_pricing": 0,
+            "verified_as_safe": false,
+            "added_notes": [
+                "- Sells premium keys to skip linkvertise (?)",
+                "- Owner involved in vanity squatting (??)",
+                "- Admission to being involved with other bad people",
+                "Uses key system",
+                "Uses Xeno source code."
+            ]
+        }
+    },
+
+    "Xeno": {
+        "UI": {
+            "script_hub": false,
+            "explorer": true,
+            "tabs": true,
+            "auto_inject": false,
+            "multiprocess": false,
+            "debug_console": false,
+            "ide": true
+        },
+        "CORE": {
+            "inject_time": 4,
+            "decompiler":  false,
+            "luarmor": true,
+            "LIB": {
+                "UNC": 84,
+                "sUNC": 45
+            }
+        },
+        "INFO": {
+            "daily_pricing": 0,
+            "verified_as_safe": true,
+            "notes": [
+                "+positive",
+                "neutral",
+                "-negative"
+            ]
+        }
+    },
+
+    "Synapse Z": {
+        "UI": {
+            "script_hub": true,
+            "explorer": true,
+            "tabs": true,
+            "auto_inject": true,
+            "multiprocess": 0.5,
+            "debug_console": true,
+            "ide": true
+        },
+        "CORE": {
+            "inject_time": 3,
+            "decompiler":  true,
+            "luarmor": true,
+            "LIB": {
+                "UNC": 100,
+                "sUNC": 100
+            }
+        },
+        "INFO": {
+            "daily_pricing": 0.434,
+            "verified_as_safe": true,
+            "notes": [
+                "+Best executor right now!",
+                "Paid key access",
+                "Community can be toxic asf, devs are cool tho"
+            ]
+        }
+    },
+
+    "Macsploit": {
+        "UI": {
+            "script_hub": true,
+            "explorer": true,
+            "tabs": true,
+            "auto_inject": true,
+            "multiprocess": 0.5,
+            "debug_console": false,
+            "ide": true
+        },
+        "CORE": {
+            "inject_time": 5,
+            "decompiler":  true,
+            "luarmor": true,
+            "LIB": {
+                "UNC": 98,
+                "sUNC": 95
+            }
+        },
+        "INFO": {
+            "daily_pricing": "LIFETIME 9.99",
+            "verified_as_safe": true,
+            "notes": [
+                "+Best Mac executor (and basically only)",
+                "-Updates are late",
+                "-Owner has shady background",
+                "-Staff are unprofessional"
+            ]
+        }
+    }
+}
