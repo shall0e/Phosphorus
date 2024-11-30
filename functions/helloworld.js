@@ -9,9 +9,8 @@ export async function onRequest(context) {
     }
 
 
-    let response = (await fetch("https://rers.shall0e.workers.dev/?"+(context.request.url).split("?")[1]))
-
-    return new Response(await (response.text()),{headers: {"Content-Type": "text/plain"}})
+    let response = await (await fetch("https://rers.shall0e.workers.dev/?"+(context.request.url).split("?")[1])).text()
+    return new Response(response)
 
 }
   //aaaa
