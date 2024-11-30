@@ -14,7 +14,7 @@ export async function onRequest(context) {
     } else {
         response = await (await fetch("https://rers.shall0e.workers.dev/")).text()
     }
-
+    
     if (!isJsonString(response)) {
         return new Response(response, {headers: {"Content-Type": "text/plain"}})
     } else {
