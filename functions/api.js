@@ -11,7 +11,7 @@ export async function onRequest(context) {
     let search = ((context.request.url).split("?"))[1]
 
     let response;
-    if (search.length > 0) {
+    if (search.includes("?")) {
         response = await (await fetch("https://rers.shall0e.workers.dev/?"+search)).text()
     } else {
         response = await (await fetch("https://rers.shall0e.workers.dev/")).text()
