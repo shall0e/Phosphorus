@@ -14,7 +14,7 @@ export async function onRequest(context) {
     if (!isJsonString(await response.text())) {
         return new Response(await response.text(),{headers: {"Content-Type": "text/plain"}})
     } else {
-        return new Response(JSON.stringify(await response.json()),{headers: {"Content-Type": "text/plain"}})
+        return new Response(JSON.stringify(await response.json()),{headers: {"Content-Type": "application/json"}})
     }
 
 
