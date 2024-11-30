@@ -11,10 +11,10 @@ export async function onRequest(context) {
     let search = ((context.request.url).split("?"))[1]
 
     let response;
-    if (search == '') {
-        response = await (await fetch("https://rers.shall0e.workers.dev/")).text()
+    if (search.length > 0) {
+        response = await (await fetch("https://rers.shall0e.workers.dev/?"+search)).text()
     } else {
-        response = await (await fetch("https://rers.shall0e.workers.dev/?"+((context.request.url).split("?"))[1])).text()
+        response = await (await fetch("https://rers.shall0e.workers.dev/")).text()
     }
 
     if (isJsonString(response)) {
