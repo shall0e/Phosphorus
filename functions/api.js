@@ -16,9 +16,9 @@ export async function onRequest(context) {
     } else {
         response = await (await fetch("https://rers.shall0e.workers.dev/")).text()
     }
-    
+
     return new Response(JSON.stringify(JSON.parse(response)), {
-        headers: {'Content-Type': "application/json"}
+        headers: {'Content-Type': "text/plain"}
     })
 }
   //aaaa
