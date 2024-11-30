@@ -15,12 +15,10 @@ export async function onRequest(context) {
         response = await (await fetch("https://rers.shall0e.workers.dev/")).text()
     }
 
-
-    return new Response(response)
     if (!isJsonString(response)) {
         return new Response(response, {headers: {"Content-Type": "text/plain"}})
     } else {
         return new Response(response, {headers: {"Content-Type": "application/json"}})
     }
 }
-  //aaaa
+  //aaaaa
