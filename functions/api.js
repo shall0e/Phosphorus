@@ -14,7 +14,8 @@ export async function onRequest(context) {
         search = "";
     }
     let search = ("https://rers.shall0e.workers.dev/"+search)
-    let response = await (await fetch(search)).text()
+    let rawresponse = (await fetch(search)).text()
+    let response = await rawresponse
     return new Response(response)
     
     if (isJsonString(response)) {
