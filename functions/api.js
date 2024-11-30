@@ -9,16 +9,17 @@ function isJsonString(str) {
 
 export async function onRequest(context) {
     let search = ((context.request.url).split("?"))[1]
+    response = await (await fetch("https://rers.shall0e.workers.dev/?"+search)).text()
 
-    let response;
-    if (search.includes("?")) {
-        response = await (await fetch("https://rers.shall0e.workers.dev/?"+search)).text()
+
+    if (isJsonString(response)) {
+        return new Response(JSON.stringify(JSON.parse(response)), {
+            headers: {'Content-Type': "text/plain"}
+        })
     } else {
-        response = await (await fetch("https://rers.shall0e.workers.dev/")).text()
+        return new Response(response, {
+            headers: {'Content-Type': "text/plain"}
+        })
     }
-
-    return new Response(JSON.stringify(JSON.parse(response)), {
-        headers: {'Content-Type': "text/plain"}
-    })
 }
   //aaaa
