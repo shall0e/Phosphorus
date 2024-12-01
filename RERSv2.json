@@ -84,9 +84,9 @@
             "daily_pricing": 0.434,
             "verified_as_safe": true,
             "notes": [
-                "+Best executor right now!",
+                "Best executor right now!",
                 "Paid key access",
-                "Community can be toxic asf, devs are cool tho"
+                "-Community can be toxic asf, devs are cool tho"
             ]
         }
     },
@@ -112,9 +112,40 @@
         },
         "INFO": {
             "daily_pricing": "LIFETIME 9.99",
-            "verified_as_safe": true,
+            "verified_as_safe": false,
             "notes": [
                 "+Best Mac executor (and basically only)",
+                "-Updates are late",
+                "-Owner has shady background",
+                "-Staff are unprofessional"
+            ]
+        }
+    },
+
+    "Solara": {
+        "UI": {
+            "script_hub": false,
+            "explorer": false,
+            "tabs": true,
+            "auto_inject": false,
+            "multiprocess": false,
+            "debug_console": false,
+            "ide": true
+        },
+        "CORE": {
+            "inject_time": 6,
+            "decompiler":  false,
+            "luarmor": true,
+            "LIB": {
+                "UNC": 70,
+                "sUNC": 60
+            }
+        },
+        "INFO": {
+            "daily_pricing": 0,
+            "verified_as_safe": true,
+            "notes": [
+                "",
                 "-Updates are late",
                 "-Owner has shady background",
                 "-Staff are unprofessional"
