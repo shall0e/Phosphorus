@@ -39,7 +39,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    background: radial-gradient(circle at center, var(--secondary-color) 0%, var(--background-dark) 100%);
+    background: radial-gradient(circle at center, var(--background-dark) 0%, var(--secondary-color) 100%);
     position: relative;
 }
 
