@@ -1,5 +1,5 @@
 {
-    "Xeno": {
+    "Luna": {
         "_source": "https://raw.githubusercontent.com/suffz/luna/refs/heads/main/config.json",
         "_map": [
             ["CORE.LIB.UNC", "unc"],
