@@ -1,0 +1,34 @@
+{
+    "Luna": {
+        "DATASOURCE": "",
+        "UI": {
+            "script_hub": false,
+            "explorer": false,
+            "tabs": true,
+            "auto_inject": CUSTOMDATA.injectspeed,
+            "multiprocess": false,
+            "debug_console": false,
+            "ide": true
+        },
+        "CORE": {
+            "inject_time": 12,
+            "decompiler":  false,
+            "luarmor": true,
+            "LIB": {
+                "UNC": CUSTOMDATA.unc,
+                "sUNC": CUSTOMDATA.sunc
+            }
+        },
+        "INFO": {
+            "daily_pricing": 0,
+            "verified_as_safe": false,
+            "added_notes": [
+                "- Sells premium keys to skip linkvertise (?)",
+                "- Owner involved in vanity squatting (??)",
+                "- Admission to being involved with other bad people",
+                "Uses key system",
+                "Uses Xeno source code."
+            ]
+        }
+    }
+}
