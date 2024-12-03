@@ -1,0 +1,10 @@
+{
+    "Xeno": {
+        "_source": "",
+        "_map": [
+            ["CORE.LIB.UNC", "unc"],
+            ["CORE.LIB.sUNC", "sunc"],
+            ["CORE.inject_time", "injectspeed"]
+        ]
+    }
+}
