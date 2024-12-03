@@ -11,17 +11,12 @@
 }
 
 @font-face {
-    font-family: "Product Sans";
-    src: "/assets/Product Sans Regular.ttf";
+    font-family: ProductSans;
+    src: url("../assets/Product Sans Regular.ttf") format("truetype");
 }
 
 img {
     width: 30rem;
-}
-
-* {
-    font-family: "Product Sans";
-    box-sizing: border-box;
 }
 
 body {
@@ -204,4 +199,9 @@ footer {
     .primary-btn, .secondary-btn {
         width: 100%;
     }
+}
+
+
+*{
+    font-family: ProductSans;
 }
