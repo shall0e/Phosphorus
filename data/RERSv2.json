@@ -37,7 +37,7 @@
             "explorer": true,
             "tabs": true,
             "auto_inject": false,
-            "multiprocess": false,
+            "multiprocess": true,
             "debug_console": false,
             "ide": true
         },
