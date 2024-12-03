@@ -151,34 +151,4 @@
             ]
         }
     }
-
-    "Test": {
-        "UI": {
-            "script_hub": false,
-            "explorer": false,
-            "tabs": true,
-            "auto_inject": false,
-            "multiprocess": false,
-            "debug_console": false,
-            "ide": true
-        },
-        "CORE": {
-            "inject_time": 6,
-            "decompiler":  false,
-            "luarmor": true,
-            "LIB": {
-                "UNC": 70,
-                "sUNC": 60
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0,
-            "verified_as_safe": true,
-            "notes": [
-                "+Most popular exploit",
-                "Likely to be unmaintained in the future",
-                "-Lacking lots of Quality Of Life features"
-            ]
-        }
-    }
 }
