@@ -17,7 +17,7 @@ async function main() {
 
 (async () => {
 var execs;
-execs = await main();  // Set the global execs variable
+execs = await main();
 
 
 
@@ -127,3 +127,5 @@ for (var item in execs) {
 document.getElementById("starter").remove()
 
 })();
+
+// please excuse the shit code ill fix it one day, but this works for now.
