@@ -110,7 +110,13 @@ for (var item in execs) {
     var newLine = document.createElement("p")
     for (var i in executor.INFO.notes) {
         var newLine = document.createElement("p")
-        newLine.innerHTML = ((executor.INFO.notes[i]).replace("+",'<b class="goodtext">+</b> ').replace("-",'<b class="badtext">-</b> '))
+        if ((executor.INFO.notes[i]).substring(0,1) == "+") {
+            newLine.innerHTML = ((executor.INFO.notes[i]).replace("+",'<b class="goodtext">+</b> '))
+        } else if ((executor.INFO.notes[i]).substring(0,1) == "-") {
+            newLine.innerHTML = ((executor.INFO.notes[i]).replace("-",'<b class="badtext">-</b> '))
+        } else {
+            newLine.innerHTML = (executor.INFO.notes[i])
+        }
         entry.appendChild(newLine)
     }
 }

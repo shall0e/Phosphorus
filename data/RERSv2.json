@@ -170,7 +170,7 @@
         },
         "INFO": {
             "daily_pricing": 0,
-            "added_notes": [
+            "notes": [
                 "+Fast injection.",
                 "-Issues with script execution.",
                 "-Owner has been subject to controversy."
