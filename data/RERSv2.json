@@ -21,12 +21,11 @@
         "INFO": {
             "daily_pricing": 0,
             "verified_as_safe": false,
-            "added_notes": [
+            "notes": [
                 "- Sells premium keys to skip linkvertise (?)",
                 "- Owner involved in vanity squatting (??)",
                 "- Admission to being involved with other bad people",
-                "Uses key system",
-                "Uses Xeno source code."
+                "Uses key system"
             ]
         }
     },
