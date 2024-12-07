@@ -16,9 +16,19 @@ export async function onRequest(context) {
     }
     
     if (!isJsonString(response)) {
-        return new Response(response, {headers: {"Content-Type": "text/plain"}})
+        return new Response(response, {headers: {
+            "Content-Type": "text/plain",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
+        }})
     } else {
-        return new Response(response, {headers: {"Content-Type": "application/json"}})
+        return new Response(response, {headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
+        }})
     }
 }
   //aaaaa
