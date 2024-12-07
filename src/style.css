@@ -23,18 +23,18 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    background: radial-gradient(circle at center, var(--background-dark) 0%, var(--secondary-color) 100%);
 }
 
 .hero {
-    min-height: 100vh; /* Ensure it takes the full viewport height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically centers */
-    align-items: center; /* Horizontally centers */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 2rem;
-    background: radial-gradient(circle at center, var(--background-dark) 0%, var(--secondary-color) 100%);
-    margin: 0; /* Remove unwanted spacing */
+    margin: 0;
     box-sizing: border-box;
 }
 

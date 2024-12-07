@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #5552f2;
+    --secondary-color: #130c1f;
+    --accent-color: #ffffff;
+    --background-dark: #192433;
+    --card-background: #0f1520;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A8B2C7;
+    --button-gradient: linear-gradient(135deg, #007AFF, #8d56d6);
+    --hover-gradient: linear-gradient(135deg, #0749ff, #623acf);
+}
+
+@font-face {
+    font-family: ProductSans;
+    src: url("../assets/Product Sans Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: BoldProductSans;
+    src: url("../assets/Product Sans Bold.ttf") format("truetype");
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--background-dark) 0%, var(--secondary-color) 100%);
+}
+
+.entry {
+    width: 500px;
+    height: 250px;
+    background-color: rgb(39, 36, 56);
+    border-radius: 25px;
+}
+
+.entry h1 {
+    font-size: 50;
+    font-weight: 500;
+    padding-left: 5%;
+    padding-top: 2.5%;
+    margin-bottom: 2.5%;
+    font-family: BoldProductSans;
+}
+
+.entry p {
+    font-size: 20px;
+    font-weight: lighter;
+    padding-left: 5%;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: auto;
+}
+
+.labelrow {
+    overflow: hidden;
+    margin-left: 4%;
+    padding-bottom: 2.5%
+}
+
+.label {
+    background-color: rgb(70, 64, 105);
+}
+
+.goodlabel {
+    background-color: rgb(46, 122, 39);
+}
+.medlabel {
+    background-color: rgb(173, 119, 48);
+}
+.badlabel {
+    background-color: rgb(207, 62, 62);
+}
+
+.goodtext {
+    color: rgb(46, 122, 39);
+}
+.medtext {
+    color: rgb(255, 123, 0);
+}
+.badtext {
+    color: rgb(46, 199, 0);
+}
+.neuttext {
+    color: rgb(48, 48, 48);
+}
+
+.labelrow * {
+    width: 100px;
+    height: 40px;
+    line-height: 250%;
+    text-align: center;
+    font-weight: lighter;
+    margin-left: 1%;
+    border-radius: 25px;
+    float: left;
+}
+
+* {
+    font-family: ProductSans;
+}
