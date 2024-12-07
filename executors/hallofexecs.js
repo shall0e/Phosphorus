@@ -43,7 +43,7 @@ for (var item in execs) {
     };
 
     let val = Math.round(executor.INFO.daily_pricing*100)/100
-    if (typeof val !== "string") {
+    if (typeof executor.INFO.daily_pricing !== "string") {
         switch (true) {
             case (val > 0.5):
                 makeLabel(entry.querySelector(".labelrow"), "bad", ("$"+String(val)+"/day"))
@@ -59,6 +59,8 @@ for (var item in execs) {
                 }
                 break;
         }
+    } else {
+        makeLabel(entry.querySelector(".labelrow"), "med", "$9.99/Life")
     }
 
     switch (executor.CORE.decompiler) {
