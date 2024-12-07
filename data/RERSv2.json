@@ -52,9 +52,9 @@
             "daily_pricing": 0,
             "verified_as_safe": true,
             "notes": [
-                "+positive",
-                "neutral",
-                "-negative"
+                "+Open-source on <a href='https://github.com'>GitHub</a>.",
+                "Execution can be *iffy*.",
+                "-Missing many important functions."
             ]
         }
     },
@@ -83,7 +83,8 @@
             "verified_as_safe": true,
             "notes": [
                 "Best executor right now!",
-                "-Community can be toxic asf, devs are cool tho."
+                "-Community can be toxic asf, devs are cool tho.",
+                "Tends to crash, a lot."
             ]
         }
     },
@@ -108,8 +109,7 @@
             }
         },
         "INFO": {
-            "daily_pricing": "LIFETIME 9.99",
-            "verified_as_safe": false,
+            "daily_pricing": "$9.99/Lifetime",
             "notes": [
                 "+Best Mac executor. (and basically only)",
                 "-Updates are late.",
@@ -140,11 +140,11 @@
         },
         "INFO": {
             "daily_pricing": 0,
-            "verified_as_safe": true,
             "notes": [
                 "+Most popular exploit.",
                 "Likely to be unmaintained in the future.",
-                "-Lacking lots of Quality Of Life features."
+                "Large subject and target of many scams.",
+                "-Lacking lots of UI features."
             ]
         }
     },
@@ -170,9 +170,10 @@
         },
         "INFO": {
             "daily_pricing": 0,
-            "verified_as_safe": true,
             "added_notes": [
-                
+                "+Fast injection.",
+                "-Issues with script execution.",
+                "-Owner has been subject to controversy."
             ]
         }
      }

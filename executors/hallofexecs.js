@@ -42,15 +42,24 @@ for (var item in execs) {
         };
     };
 
-    
-
-    if (executor.INFO.daily_pricing > 1) {
-        makeLabel(entry.querySelector(".labelrow"), "bad", (("$"+String(Math.round(executor.INFO.daily_pricing*100)/100)+"/day")))
+    let val = Math.round(executor.INFO.daily_pricing*100)/100
+    if (typeof val !== "string") {
+        switch (true) {
+            case (val > 0.5):
+                makeLabel(entry.querySelector(".labelrow"), "bad", ("$"+String(val)+"/day"))
+                break;
+            case (val > 1):
+                makeLabel(entry.querySelector(".labelrow"), "bad", ("$"+String(val)+"/day"))
+                break;
+            default:
+                if (val == 0) {
+                    makeLabel(entry.querySelector(".labelrow"), "good", ("Free"))
+                } else {
+                    makeLabel(entry.querySelector(".labelrow"), "good", ("$"+String(val)+"/day"))
+                }
+                break;
+        }
     }
-    if (executor.INFO.daily_pricing > 0.3) {
-        makeLabel(entry.querySelector(".labelrow"), "bad", (("$"+String(Math.round(executor.INFO.daily_pricing*100)/100)+"/day")))
-    }
-
 
     switch (executor.CORE.decompiler) {
         default:
@@ -64,7 +73,7 @@ for (var item in execs) {
             break;
     }
 
-    let val = executor.CORE.LIB.UNC
+    val = executor.CORE.LIB.UNC
     switch (true) {
         case (val > 80):
             makeLabel(entry.querySelector(".labelrow"), "good", (val+"% UNC"))
@@ -76,6 +85,7 @@ for (var item in execs) {
             makeLabel(entry.querySelector(".labelrow"), "bad", (val+"% UNC"))
             break;
     }
+
     val = Math.round(executor.CORE.LIB.UNCfract)
     sunc = executor.CORE.LIB.sUNC
     switch (true) {
@@ -89,7 +99,6 @@ for (var item in execs) {
             makeLabel(entry.querySelector(".labelrow"), "bad", (sunc+"% sUNC"))
             break;
     }
-
 
 
     var rating = entry.querySelector(".goodtext")
