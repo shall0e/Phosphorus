@@ -49,6 +49,9 @@ for (var item in execs) {
                 makeLabel(entry.querySelector(".labelrow"), "bad", ("$"+String(val)+"/day"))
                 break;
             case (val > 1):
+                makeLabel(entry.querySelector(".labelrow"), "med", ("$"+String(val)+"/day"))
+                break;
+            case (val > 1.5):
                 makeLabel(entry.querySelector(".labelrow"), "bad", ("$"+String(val)+"/day"))
                 break;
             default:
@@ -117,8 +120,13 @@ for (var item in execs) {
         } else if ((executor.INFO.notes[i]).substring(0,1) == "-") {
             newLine.innerHTML = ((executor.INFO.notes[i]).replace("-",'<b class="badtext">-</b> '))
         } else {
-            newLine.innerHTML = (executor.INFO.notes[i])
+            newLine.innerHTML = ("<b class='note'>~</b> "+executor.INFO.notes[i])
         }
+        entry.appendChild(newLine)
+    }
+    if ("_AUTOSRC" in executor) {
+        var newLine = document.createElement("p")
+        newLine.innerHTML = "<br> <a class='note' href='"+"https://ankor.pages.dev/api/?link"+"'>This entry is using dynamic link.<a>"
         entry.appendChild(newLine)
     }
 }
