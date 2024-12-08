@@ -64,7 +64,7 @@ body, html {
     border-width: 10px;
 }
 
-.primary-btn, .secondary-btn, .download-btn, .api-btn {
+.primary-btn, .secondary-btn {
     padding: 1rem 2.5rem;
     border-radius: 12px;
     font-weight: 600;

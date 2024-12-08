@@ -126,7 +126,7 @@ for (var item in execs) {
     }
     if ("_AUTOSRC" in executor) {
         var newLine = document.createElement("p")
-        newLine.innerHTML = "<br> <a class='note' href='"+"https://ankor.pages.dev/api/?link"+"'>This entry is using dynamic link.<a>"
+        newLine.innerHTML = "<br> <a class='note' href='"+"https://ankor.pages.dev/api/?raw&name="+executor.name+"'>This entry is using dynamic link.<a> <a style='{color;}'href='https://ankor.pages.dev/info'>learn more</a>"
         entry.appendChild(newLine)
     }
 }

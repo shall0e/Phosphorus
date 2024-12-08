@@ -10,51 +10,69 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color:rgb(23, 18, 41);
+    background-color: rgb(23, 18, 41);
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
 .display {
     display: grid;
-    grid-template-columns: repeat(3, 470px);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 400px);
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
 
+p, h1 {
+    color: white;
+}
+a {
+    color: rgb(82, 142, 255)
 }
 
 .entry {
-    width: 470px;
-    height: 300px;
+    width: 100%;
+    max-width: 400px;
+    height: 270px;
     background-color: rgb(30, 27, 49);
-    border-radius: 25px;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
 
 .entry h1 {
-    font-size: 50px;
+    font-size: 2rem;
     font-weight: 500;
-    padding-left: 5%;
-    padding-top: 2.5%;
-    margin-top: 1%;
-    margin-bottom: 2.5%;
+    margin: auto;
     font-family: BoldProductSans;
 }
 
 .entry p {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: lighter;
-    padding-left: 5%;
-    margin: auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    padding: auto;
+    margin: 0.25rem 0;
 }
 
 .labelrow {
     overflow: hidden;
-    margin-left: 4%;
-    padding-bottom: 2.5%
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.label, .goodlabel, .medlabel, .badlabel {
+    color: rgb(255, 255, 255);
+    flex: 1;
+    max-width: 100px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-weight: lighter;
+    border-radius: 1.25rem;
+    padding-bottom: 2rem 0;
+    font-size: 0.75rem;
 }
 
 .label {
@@ -87,18 +105,7 @@ body, html {
     color: rgba(255, 255, 255, 0.349);
 }
 
-.labelrow * {
-    width: 100px;
-    height: 40px;
-    line-height: 250%;
-    text-align: center;
-    font-weight: lighter;
-    margin-left: 1%;
-    border-radius: 25px;
-    float: left;
-}
-
 * {
     font-family: ProductSans;
-    color:white
+    box-sizing: border-box;
 }
