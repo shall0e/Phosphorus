@@ -131,7 +131,7 @@
         },
         "CORE": {
             "inject_time": 6,
-            "decompiler":  true,
+            "decompiler":  false,
             "luarmor": true,
             "LIB": {
                 "UNC": 70,
