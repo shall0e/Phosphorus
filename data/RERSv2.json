@@ -15,7 +15,7 @@
             "luarmor": true,
             "LIB": {
                 "UNC": 88,
-                "sUNC": 41
+                "sUNC": 56
             }
         },
         "INFO": {
@@ -45,7 +45,7 @@
             "luarmor": true,
             "LIB": {
                 "UNC": 84,
-                "sUNC": 45
+                "sUNC": 56
             }
         },
         "INFO": {
@@ -131,7 +131,7 @@
         },
         "CORE": {
             "inject_time": 6,
-            "decompiler":  false,
+            "decompiler":  true,
             "luarmor": true,
             "LIB": {
                 "UNC": 70,
@@ -179,6 +179,35 @@
      },
 
      "Wave": {
+        "UI": {
+            "script_hub": true,
+            "explorer": true,
+            "tabs": true,
+            "auto_inject": true,
+            "multiprocess": false,
+            "debug_console": true,
+            "ide": true
+        },
+        "CORE": {
+            "inject_time": 6,
+            "decompiler":  true,
+            "luarmor": true,
+            "LIB": {
+                "UNC": 100,
+                "sUNC": 98
+            }
+        },
+        "INFO": {
+            "daily_pricing": 1.142,
+            "notes": [
+                "-<a class='badtext' href='https://v3rm.net/threads/wave-concerns-fake-drawing-lib-plaintext-passwords-etc.9580/#post-62759'>*Strange* business practices.</a>",
+                "-Freemium almost always down.",
+                "-Staff/Support are unprofessional."
+            ]
+        }
+    },
+
+    "Seliware": {
         "UI": {
             "script_hub": true,
             "explorer": true,
