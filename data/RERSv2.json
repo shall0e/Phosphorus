@@ -218,7 +218,7 @@
             "ide": true
         },
         "CORE": {
-            "inject_time": 5,
+            "inject_time": 3.2,
             "decompiler":  true,
             "luarmor": true,
             "LIB": {
@@ -231,7 +231,7 @@
             "notes": [
                 "-Atlantis rebrand.",
                 "-<a class='medtext' href='https://v3rm.net/threads/wave-concerns-fake-drawing-lib-plaintext-passwords-etc.9580/#post-62759'>OG Owner (Yoru/Lxzp) is shady.</a>",
-                "~ Appears to be safe now, Yoru has been removed as owner."
+                "~Now owned by new developers, still uses Atlantis SRC."
             ]
         }
     }
