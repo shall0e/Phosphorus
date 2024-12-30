@@ -19,11 +19,11 @@
             }
         },
         "INFO": {
-            "daily_pricing": 0,
+            "daily_pricing": 0.79,
             "notes": [
-                "malware",
-                "-owner exit scammed 40 times in the past",
-                "+uses xeno source, removed all functions tho"
+                "+Claims to be undetected for now.",
+                "Came out of almost nowhere, all of the owners have close to no background except from.. Krampus.",
+                "-Accused of being Krampus V2, <a class='medtext' href='https://v3rm.net/threads/awp-gg-is-officially-confirmed-to-be-krampus-gg-rebrand.15501/'>V3RM Post.</a>"
             ]
         }
     },
