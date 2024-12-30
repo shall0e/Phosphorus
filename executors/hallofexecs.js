@@ -29,7 +29,7 @@ for (var item in execs) {
     executorName[0] = executor.name
     entry.querySelector(".name").innerHTML = executorName.join(" - <")
 
-    if (executor.rating > 0) {
+    if (executor.rating >= 0) {
         var ratingLevel = "reallybadtext";
         if (executor.rating > 3) {
             var ratingLevel = "badtext";
@@ -116,11 +116,11 @@ for (var item in execs) {
     for (var i in executor.INFO.notes) {
         var newLine = document.createElement("p")
         if ((executor.INFO.notes[i]).substring(0,1) == "+") {
-            newLine.innerHTML = ((executor.INFO.notes[i]).replace("+",'<b class="goodtext">+</b> '))
+            newLine.innerHTML = ((executor.INFO.notes[i]).replace("+",'<b class="goodtext">+ </b> '))
         } else if ((executor.INFO.notes[i]).substring(0,1) == "-") {
-            newLine.innerHTML = ((executor.INFO.notes[i]).replace("-",'<b class="badtext">-</b> '))
+            newLine.innerHTML = ((executor.INFO.notes[i]).replace("-",'<b class="badtext">- </b> '))
         } else {
-            newLine.innerHTML = ("<b class='note'>~</b> "+executor.INFO.notes[i])
+            newLine.innerHTML = ("<b class='note'>~ </b> "+executor.INFO.notes[i])
         }
         entry.appendChild(newLine)
     }
