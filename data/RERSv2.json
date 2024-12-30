@@ -22,9 +22,9 @@
             "daily_pricing": 0,
             "verified_as_safe": false,
             "notes": [
-                "- Sells premium keys to skip linkvertise. (?)",
-                "- Owner involved with other questionable figures.",
-                "- Skid of Xeno, gives out \"Zorara\" API."
+                "malware",
+                "-owner exit scammed 40 times in the past",
+                "+uses xeno source, removed all functions tho"
             ]
         }
     },
@@ -51,9 +51,9 @@
             "daily_pricing": 0,
             "verified_as_safe": false,
             "notes": [
-                "- Sells premium keys to skip linkvertise. (?)",
-                "- Owner involved with other questionable figures.",
-                "- Skid of Xeno, gives out \"Zorara\" API."
+                "-Sells premium keys to skip linkvertise. (?)",
+                "-Owner involved with other questionable figures.",
+                "-Skid of Xeno, gives out \"Zorara\" API."
             ]
         }
     },
