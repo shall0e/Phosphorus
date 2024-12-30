@@ -1,4 +1,33 @@
 {
+    "Diddysploit": {
+        "UI": {
+            "script_hub": false,
+            "explorer": false,
+            "tabs": false,
+            "auto_inject": false,
+            "multiprocess": false,
+            "debug_console": false,
+            "ide": false
+        },
+        "CORE": {
+            "inject_time": 200,
+            "decompiler":  false,
+            "luarmor": false,
+            "LIB": {
+                "UNC": 0,
+                "sUNC": 0
+            }
+        },
+        "INFO": {
+            "daily_pricing": 0,
+            "verified_as_safe": false,
+            "notes": [
+                "- Sells premium keys to skip linkvertise. (?)",
+                "- Owner involved with other questionable figures.",
+                "- Skid of Xeno, gives out \"Zorara\" API."
+            ]
+        }
+    },
     "Zorara": {
         "UI": {
             "script_hub": false,
