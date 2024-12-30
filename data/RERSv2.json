@@ -1,7 +1,7 @@
 {
     "AWP.GG": {
         "UI": {
-            "script_hub": true,
+            "script_hub": false,
             "explorer": true,
             "tabs": true,
             "auto_inject": true,
