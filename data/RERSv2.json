@@ -134,8 +134,8 @@
             "decompiler":  false,
             "luarmor": true,
             "LIB": {
-                "UNC": 70,
-                "sUNC": 60
+                "UNC": 66,
+                "sUNC": 55
             }
         },
         "INFO": {
