@@ -1,26 +1,25 @@
 {
     "AWP.GG": {
         "UI": {
-            "script_hub": false,
-            "explorer": false,
-            "tabs": false,
-            "auto_inject": false,
-            "multiprocess": false,
-            "debug_console": false,
-            "ide": false
+            "script_hub": true,
+            "explorer": true,
+            "tabs": true,
+            "auto_inject": true,
+            "multiprocess": true,
+            "debug_console": true,
+            "ide": true
         },
         "CORE": {
-            "inject_time": 200,
-            "decompiler":  false,
-            "luarmor": false,
+            "inject_time": 1,
+            "decompiler":  true,
+            "luarmor": true,
             "LIB": {
-                "UNC": 0,
-                "sUNC": 0
+                "UNC": 100,
+                "sUNC": 100
             }
         },
         "INFO": {
             "daily_pricing": 0,
-            "verified_as_safe": false,
             "notes": [
                 "malware",
                 "-owner exit scammed 40 times in the past",
@@ -49,7 +48,6 @@
         },
         "INFO": {
             "daily_pricing": 0,
-            "verified_as_safe": false,
             "notes": [
                 "-Sells premium keys to skip linkvertise. (?)",
                 "-Owner involved with other questionable figures.",
@@ -79,7 +77,6 @@
         },
         "INFO": {
             "daily_pricing": 0,
-            "verified_as_safe": true,
             "notes": [
                 "+Open-source on <a href='https://github.com/Riz-ve/Xeno'>GitHub</a>.",
                 "Execution can be *iffy*.",
@@ -109,7 +106,6 @@
         },
         "INFO": {
             "daily_pricing": 0.434,
-            "verified_as_safe": true,
             "notes": [
                 "+Best executor right now!",
                 "-Community can be toxic asf, devs are cool tho.",
