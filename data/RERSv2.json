@@ -96,12 +96,12 @@
             "ide": true
         },
         "CORE": {
-            "inject_time": 3,
+            "inject_time": 2,
             "decompiler":  true,
             "luarmor": true,
             "LIB": {
                 "UNC": 100,
-                "sUNC": 98
+                "sUNC": 100
             }
         },
         "INFO": {
