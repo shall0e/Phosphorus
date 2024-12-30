@@ -10,7 +10,7 @@
             "ide": true
         },
         "CORE": {
-            "inject_time": 1,
+            "inject_time": 0,
             "decompiler":  true,
             "luarmor": true,
             "LIB": {
@@ -91,7 +91,7 @@
             "explorer": true,
             "tabs": true,
             "auto_inject": true,
-            "multiprocess": 0.5,
+            "multiprocess": false,
             "debug_console": true,
             "ide": true
         },
@@ -101,15 +101,15 @@
             "luarmor": true,
             "LIB": {
                 "UNC": 100,
-                "sUNC": 100
+                "sUNC": 98
             }
         },
         "INFO": {
             "daily_pricing": 0.434,
             "notes": [
-                "+Best executor right now!",
-                "-Community can be toxic asf, devs are cool tho.",
-                "-Tends to crash, a lot."
+                "+Solid quality executor.",
+                "-Tends to crash, a lot.",
+                "-Community can be toxic asf, devs are cool tho."
             ]
         }
     },
