@@ -6,13 +6,11 @@
             "tabs": true,
             "auto_inject": true,
             "multiprocess": true,
-            "debug_console": true,
-            "ide": true
+            "debug_console": true
         },
         "CORE": {
             "inject_time": 0,
             "decompiler":  true,
-            "luarmor": true,
             "LIB": {
                 "UNC": 100,
                 "sUNC": 100
@@ -34,13 +32,11 @@
             "tabs": true,
             "auto_inject": false,
             "multiprocess": false,
-            "debug_console": false,
-            "ide": true
+            "debug_console": false
         },
         "CORE": {
             "inject_time": 12,
             "decompiler":  false,
-            "luarmor": true,
             "LIB": {
                 "UNC": 88,
                 "sUNC": 56
@@ -63,13 +59,11 @@
             "tabs": true,
             "auto_inject": false,
             "multiprocess": true,
-            "debug_console": false,
-            "ide": true
+            "debug_console": false
         },
         "CORE": {
             "inject_time": 4,
             "decompiler":  false,
-            "luarmor": true,
             "LIB": {
                 "UNC": 84,
                 "sUNC": 56
@@ -92,13 +86,11 @@
             "tabs": true,
             "auto_inject": true,
             "multiprocess": false,
-            "debug_console": true,
-            "ide": true
+            "debug_console": true
         },
         "CORE": {
             "inject_time": 2,
             "decompiler":  true,
-            "luarmor": true,
             "LIB": {
                 "UNC": 100,
                 "sUNC": 100
@@ -121,13 +113,11 @@
             "tabs": true,
             "auto_inject": true,
             "multiprocess": 0.5,
-            "debug_console": false,
-            "ide": true
+            "debug_console": false
         },
         "CORE": {
             "inject_time": 5,
             "decompiler":  true,
-            "luarmor": true,
             "LIB": {
                 "UNC": 98,
                 "sUNC": 95
@@ -151,13 +141,11 @@
             "tabs": true,
             "auto_inject": false,
             "multiprocess": false,
-            "debug_console": false,
-            "ide": true
+            "debug_console": false
         },
         "CORE": {
             "inject_time": 6,
             "decompiler":  false,
-            "luarmor": true,
             "LIB": {
                 "UNC": 66,
                 "sUNC": 55
@@ -181,13 +169,11 @@
             "tabs": true,
             "auto_inject": false,
             "multiprocess": true,
-            "debug_console": false,
-            "ide": true
+            "debug_console": false
         },
         "CORE": {
             "inject_time": 0.5,
             "decompiler":  false,
-            "luarmor": true,
             "LIB": {
                 "UNC": 67,
                 "sUNC": 8
@@ -210,13 +196,11 @@
             "tabs": true,
             "auto_inject": true,
             "multiprocess": false,
-            "debug_console": true,
-            "ide": true
+            "debug_console": true
         },
         "CORE": {
             "inject_time": 6,
             "decompiler":  true,
-            "luarmor": true,
             "LIB": {
                 "UNC": 100,
                 "sUNC": 98
@@ -239,13 +223,11 @@
             "tabs": true,
             "auto_inject": true,
             "multiprocess": false,
-            "debug_console": 0.5,
-            "ide": true
+            "debug_console": 0.5
         },
         "CORE": {
             "inject_time": 3.2,
             "decompiler":  true,
-            "luarmor": true,
             "LIB": {
                 "UNC": 100,
                 "sUNC": 98

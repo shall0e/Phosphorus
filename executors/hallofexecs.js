@@ -31,9 +31,9 @@ for (var item in execs) {
 
     if (executor.rating >= 0) {
         var ratingLevel = "reallybadtext";
-        if (executor.rating > 3) {
+        if (executor.rating > 2) {
             var ratingLevel = "badtext";
-            if (executor.rating > 5.2) {
+            if (executor.rating > 4.5) {
                 var ratingLevel = "medtext";
                 if (executor.rating > 7.5) {
                     var ratingLevel = "goodtext";
@@ -45,13 +45,13 @@ for (var item in execs) {
     let val = Math.round(executor.INFO.daily_pricing*100)/100
     if (typeof executor.INFO.daily_pricing !== "string") {
         switch (true) {
-            case (val > 0.5):
+            case (val > 0):
                 makeLabel(entry.querySelector(".labelrow"), "bad", ("$"+String(val)+"/day"))
                 break;
-            case (val > 1):
+            case (val > 0.5):
                 makeLabel(entry.querySelector(".labelrow"), "med", ("$"+String(val)+"/day"))
                 break;
-            case (val > 1.5):
+            case (val > 1):
                 makeLabel(entry.querySelector(".labelrow"), "bad", ("$"+String(val)+"/day"))
                 break;
             default:
