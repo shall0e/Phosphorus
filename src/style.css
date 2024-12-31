@@ -1,9 +1,9 @@
 :root {
     --primary-color: #5552f2;
-    --secondary-color: #130c1f;
+    --secondary-color: #111111;
     --accent-color: #ffffff;
-    --background-dark: #192433;
-    --card-background: #0f1520;
+    --background-dark: #1a1a20;
+    --card-background: #1a1924;
     --text-primary: #FFFFFF;
     --text-secondary: #A8B2C7;
     --button-gradient: linear-gradient(135deg, #007AFF, #8d56d6);
@@ -142,7 +142,6 @@ footer {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(0, 122, 255, 0.1);
 }
 
 
