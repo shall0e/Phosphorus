@@ -3,7 +3,6 @@
         "_source": "https://raw.githubusercontent.com/suffz/luna/refs/heads/main/config.json",
         "_map": [
             ["CORE.LIB.UNC", "unc"],
-            ["CORE.LIB.sUNC", "sunc"],
             ["CORE.inject_time", "injectspeed"]
         ]
     }
