@@ -6,6 +6,10 @@
     font-family: BoldProductSans;
     src: url("../assets/Product Sans Bold.ttf") format("truetype");
 }
+@font-face {
+    font-family: AWP;
+    src: url("../assets/Ethnocentric Rg.otf") format("opentype");
+}
 
 body, html {
     margin: 0;
@@ -106,6 +110,6 @@ a {
 }
 
 * {
-    font-family: ProductSans;
+    font-family: AWP;
     box-sizing: border-box;
 }

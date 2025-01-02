@@ -14,6 +14,10 @@
     font-family: ProductSans;
     src: url("../assets/Product Sans Regular.ttf") format("truetype");
 }
+@font-face {
+    font-family: AWP;
+    src: url("../assets/Ethnocentric Rg.otf") format("opentype");
+}
 
 img {
     width: 30rem;
@@ -202,6 +206,6 @@ footer {
 
 
 *{
-    font-family: ProductSans;
+    font-family: AWP;
     color: white;
 }
