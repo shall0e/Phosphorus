@@ -141,7 +141,6 @@ exportBtn.addEventListener('click', exportJson);
 addEntryBtn.addEventListener('click', addEntry);
 const loadFromUrlButton = document.getElementById('loadFromUrlButton');
 
-// Add an event listener for the Load from URL button
 loadFromUrlButton.addEventListener('click', () => {
     let url = prompt("Enter the URL of the JSON file:");
     if (url == " ") {
@@ -159,8 +158,8 @@ async function loadFileFromUrl(url) {
             throw new Error('Network response was not ok');
         }
         const json = await response.json();
-        currentJson = json;  // Load the JSON into currentJson
-        renderEditor();  // Re-render the editor with the new JSON
+        currentJson = json;
+        renderEditor();
     } catch (error) {
         alert('Failed to load JSON from URL: ' + error.message);
     }
