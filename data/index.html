@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankor JSON Editor</title>
+    <style>
+        @font-face {
+            font-family: ProductSans;
+            src: url("../assets/Product Sans Regular.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: BoldProductSans;
+            src: url("../assets/Product Sans Bold.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: AWP;
+            src: url("../assets/Ethnocentric Rg.otf") format("opentype");
+        }
+        * {
+            font-family: "ProductSans";
+            font-weight: lighter;
+        }
+        body {
+            background-color: #100c18;
+            color: #f0f0f0;
+            margin: 20px;
+        }
+        .entry {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #252233;
+        }
+        .entry h2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 10px;
+        }
+        .button-group {
+            display: flex;
+            gap: 5px;
+        }
+        .entry-content {
+            display: none; /* Start minimized */
+            margin-top: 10px;
+        }
+        .field {
+            margin: 5px 0;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input, textarea {
+            background-color: #3e3e3e;
+            color: #f0f0f0;
+            border: 1px solid #555;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #444;
+            color: #f0f0f0;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .remove-button {
+            background-color: #d9534f;
+        }
+        .remove-button:hover {
+            background-color: #c9302c;
+        }
+        .add-button {
+            background-color: #5cb85c;
+        }
+        .add-button:hover {
+            background-color: #4cae4c;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+        }
+        .array-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .array-item input {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ankor JSON Editor</h1>
+    <p>This page is AI generated because I was too lazy. 🙏😭</p>
+    <input type="file" id="jsonFileInput" accept="application/json">
+    <button id="loadFromUrlButton">Load from URL</button>
+    <div id="editor"></div>
+    <button id="addEntryButton" class="add-button">Add Entry</button>
+    <button id="exportButton">Export JSON</button>
+    <script>
+        const format = {
+            UI: {
+                script_hub: false,
+                explorer: false,
+                tabs: false,
+                auto_inject: false,
+                multiprocess: false,
+                debug_console: false
+            },
+            CORE: {
+                inject_time: 0,
+                decompiler: false,
+                LIB: {
+                    UNC: 0,
+                    sUNC: 0 
+                }
+            },
+            INFO: {
+                daily_pricing: 0,
+                notes: [
+                    "note"
+                ]
+            }
+        };
+
+let currentJson = {};
+
+const fileInput = document.getElementById('jsonFileInput');
+const exportBtn = document.getElementById('exportButton');
+const addEntryBtn = document.getElementById('addEntryButton');
+
+fileInput.addEventListener('change', e => loadFile(e.target.files[0]));
+exportBtn.addEventListener('click', exportJson);
+addEntryBtn.addEventListener('click', addEntry);
+const loadFromUrlButton = document.getElementById('loadFromUrlButton');
+
+// Add an event listener for the Load from URL button
+loadFromUrlButton.addEventListener('click', () => {
+    let url = prompt("Enter the URL of the JSON file:");
+    if (url == " ") {
+        url = "https://ankor.pages.dev/data/RERSv2.json"
+    }
+    if (url) {
+        loadFileFromUrl(url);
+    }
+});
+
+async function loadFileFromUrl(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const json = await response.json();
+        currentJson = json;  // Load the JSON into currentJson
+        renderEditor();  // Re-render the editor with the new JSON
+    } catch (error) {
+        alert('Failed to load JSON from URL: ' + error.message);
+    }
+}
+
+
+function loadFile(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+        try {
+            currentJson = JSON.parse(e.target.result);
+            renderEditor();
+        } catch {
+            alert('Invalid JSON file');
+        }
+    };
+    reader.readAsText(file);
+}
+
+function renderEditor() {
+    const editor = document.getElementById('editor');
+    editor.innerHTML = '';
+
+    for (const key in currentJson) {
+        const entry = document.createElement('div');
+        entry.className = 'entry';
+        entry.innerHTML = `
+            <h2>
+                ${key} 
+                <div class="button-group">
+                    <button onclick="toggleEntry(this)">Expand</button>
+                    <button class="remove-button" onclick="removeEntry(this, '${key}')">Remove</button>
+                </div>
+            </h2>
+            <div class="entry-content"></div>
+        `;
+
+        createFields(currentJson[key], format, entry.querySelector('.entry-content'));
+        editor.appendChild(entry);
+    }
+}
+
+
+function toggleEntry(button) {
+    const content = button.closest('h2').nextElementSibling;
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        button.textContent = 'Minimize';
+    } else {
+        content.style.display = 'none';
+        button.textContent = 'Expand';
+    }
+}
+
+function createFields(data, format, container) {
+    for (const key in format) {
+        const fieldDiv = document.createElement('div');
+        fieldDiv.className = 'field';
+
+        if (typeof format[key] === 'boolean') {
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = data[key] ?? format[key];
+            checkbox.addEventListener('change', () => {
+                data[key] = checkbox.checked;
+            });
+
+            fieldDiv.innerHTML = `<label>${key}</label>`;
+            fieldDiv.appendChild(checkbox);
+        } else if (typeof format[key] === 'number' || typeof format[key] === 'string') {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.value = data[key] ?? format[key];
+            input.addEventListener('input', () => {
+                data[key] = input.value;
+            });
+
+            fieldDiv.innerHTML = `<label>${key}</label>`;
+            fieldDiv.appendChild(input);
+        } else if (Array.isArray(format[key])) {
+            const arrayDiv = document.createElement('div');
+            arrayDiv.innerHTML = `<label>${key}</label>`;
+
+            (data[key] || []).forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'array-item';
+                itemDiv.innerHTML = `<input type="text" value="${item}"><button onclick="removeArrayItem(this)">-</button>`;
+                arrayDiv.appendChild(itemDiv);
+            });
+
+            const addBtn = document.createElement('button');
+            addBtn.textContent = 'Add Item';
+            addBtn.onclick = () => addArrayItem(arrayDiv, data);
+            arrayDiv.appendChild(addBtn);
+            fieldDiv.appendChild(arrayDiv);
+        } else if (typeof format[key] === 'object') {
+            const subContainer = document.createElement('div');
+            subContainer.innerHTML = `<h3>${key}</h3>`;
+            createFields(data[key] || {}, format[key], subContainer);
+            fieldDiv.appendChild(subContainer);
+        }
+
+        container.appendChild(fieldDiv);
+    }
+}
+
+function addArrayItem(container, data) {
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'array-item';
+    itemDiv.innerHTML = `<input type="text"><button onclick="removeArrayItem(this)">-</button>`;
+    container.insertBefore(itemDiv, container.lastElementChild);
+
+    const input = itemDiv.querySelector('input');
+    input.addEventListener('input', () => {
+        const index = Array.from(container.children).indexOf(itemDiv);
+        data[index] = input.value;
+    });
+}
+
+
+function removeArrayItem(btn) {
+    btn.parentElement.remove();
+}
+
+function addEntry() {
+    const newKey = prompt('Enter the name for the new entry:');
+    if (!newKey) return;
+    if (currentJson[newKey]) {
+        alert('An entry with this name already exists.');
+        return;
+    }
+
+    currentJson[newKey] = JSON.parse(JSON.stringify(format));
+    renderEditor();
+
+    const newEntry = [...document.querySelectorAll('.entry')].pop();
+    newEntry.querySelector('.entry-content').style.display = 'block';
+    newEntry.querySelector('button').textContent = 'Minimize';
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+function removeEntry(btn, key) {
+    if (confirm(`Are you sure you want to remove the entry "${key}"?`)) {
+        delete currentJson[key];
+        btn.closest('.entry').remove();
+    }
+}
+
+function exportJson() {
+    document.querySelectorAll('.entry').forEach(entry => {
+        const entryKey = entry.querySelector('h2').textContent.split(' ')[0];
+
+        currentJson[entryKey] = collectData(entry.querySelector('.entry-content'), currentJson[entryKey] || format);
+    });
+
+    delete currentJson["\n"]
+    const blob = new Blob([JSON.stringify(currentJson, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'updated_data.json';
+    link.click();
+    URL.revokeObjectURL(url);
+}
+
+function collectData(container, format) {
+    const data = {};
+
+    container.querySelectorAll('.field').forEach(field => {
+        const label = field.querySelector('label').textContent;
+        const input = field.querySelector('input, textarea');
+
+        if (input) {
+            if (input.type === 'checkbox') {
+                data[label] = input.checked;
+            } else {
+                data[label] = input.value;
+            }
+        } else {
+            const subContainer = field.querySelector('div');
+            if (subContainer) {
+                data[label] = collectData(subContainer, format[label]);
+            }
+        }
+    });
+
+    return data;
+}
+    </script>
+</body>
+</html>
