@@ -101,11 +101,9 @@
     <p>This page is AI generated because I was too lazy. 🙏😭</p>
     <input type="file" id="jsonFileInput" accept="application/json">
     <button id="loadFromUrlButton">Load from URL</button>
-    <button onclick="setAPIkey()">Set API Key</button>
     <div id="editor"></div>
     <button id="addEntryButton" class="add-button">Add Entry</button>
     <button id="exportButton">Export JSON</button>
-    <button onclick="overwriteData()" class="remove-button">Overwrite GH File</button>
     <script>
         const format = {
             UI: {
@@ -134,44 +132,6 @@
 
 let currentJson = {};
 
-function setAPIkey() {
-    let apikey = prompt("GitHub API Key")
-    localStorage.setItem("apiKey",apikey)
-}
-
-function overwriteData() {
-    async function updateFile() {
-  const fileInfo = await fetchFileInfo();
-  const content = await fs.promises.readFile('path/to/local/modified/file.txt', 'utf8');  // Modify the file locally
-
-  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
-  const data = {
-    message: 'Overwriting file with new content',
-    content: Buffer.from(content).toString('base64'),  // Convert content to base64
-    sha: fileInfo.sha,  // Include the sha of the file to update
-  };
-
-  try {
-    const response = await fetch(url, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `token ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),  // Send the data as JSON
-    });
-
-    if (!response.ok) {
-      throw new Error('Error updating file');
-    }
-
-    const responseData = await response.json();
-    console.log('File updated:', responseData);
-  } catch (error) {
-    console.error('Error updating file:', error);
-  }
-}
-}
 const fileInput = document.getElementById('jsonFileInput');
 const exportBtn = document.getElementById('exportButton');
 const addEntryBtn = document.getElementById('addEntryButton');
@@ -184,7 +144,7 @@ const loadFromUrlButton = document.getElementById('loadFromUrlButton');
 loadFromUrlButton.addEventListener('click', () => {
     let url = prompt("Enter the URL of the JSON file:");
     if (url == " ") {
-        url = "https://ankor.pages.dev/data/RERSv2.json"
+        url = "https://raw.githubusercontent.com/shall0e/Phosphorus/refs/heads/main/data/RERSv2.json"
     }
     if (url) {
         loadFileFromUrl(url);
