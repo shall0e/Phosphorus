@@ -1,6 +1,6 @@
 export async function onRequest(context) {
     let content;
-    fetch('https://example.com')
+    fetch("https://shall0e.gitbook.io/ankor")
         .then(response => {
             if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
