@@ -1,245 +1,262 @@
 {
-    "AWP.GG": {
-        "UI": {
-            "script_hub": false,
-            "explorer": true,
-            "tabs": true,
-            "auto_inject": true,
-            "multiprocess": true,
-            "debug_console": true
-        },
-        "CORE": {
-            "inject_time": 0,
-            "decompiler":  true,
-            "LIB": {
-                "UNC": 100,
-                "sUNC": 100
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0.79,
-            "notes": [
-                "+Claims to be undetected for now.",
-                "-Came out of almost nowhere, all of the owners have close to no background except from.. Krampus.",
-                "-Basically Krampus V2, <a class='medtext' href='https://v3rm.net/threads/awp-gg-is-officially-confirmed-to-be-krampus-gg-rebrand.15501/'>V3RM Post.</a>"
-            ]
-        }
+  "AWP.GG": {
+    "UI": {
+      "script_hub": false,
+      "explorer": true,
+      "tabs": true,
+      "auto_inject": true,
+      "multiprocess": true,
+      "debug_console": true
     },
-    "Zorara": {
-        "UI": {
-            "script_hub": false,
-            "explorer": false,
-            "tabs": true,
-            "auto_inject": false,
-            "multiprocess": false,
-            "debug_console": false
-        },
-        "CORE": {
-            "inject_time": 12,
-            "decompiler":  false,
-            "LIB": {
-                "UNC": 88,
-                "sUNC": 56
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0,
-            "notes": [
-                "-Sells premium keys to skip linkvertise. (?)",
-                "-Owner involved with other questionable figures.",
-                "-Skid of Xeno, gives out \"Zorara\" API."
-            ]
-        }
+    "CORE": {
+      "inject_time": 0,
+      "decompiler": true,
+      "LIB": {
+        "UNC": 100,
+        "sUNC": 100
+      }
     },
-
-    "Xeno": {
-        "UI": {
-            "script_hub": false,
-            "explorer": true,
-            "tabs": true,
-            "auto_inject": false,
-            "multiprocess": true,
-            "debug_console": false
-        },
-        "CORE": {
-            "inject_time": 4,
-            "decompiler":  false,
-            "LIB": {
-                "UNC": 84,
-                "sUNC": 56
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0,
-            "notes": [
-                "+Open-source on <a href='https://github.com/Riz-ve/Xeno'>GitHub</a>.",
-                "Execution can be *iffy*.",
-                "-Missing many important functions."
-            ]
-        }
-    },
-
-    "Synapse Z": {
-        "UI": {
-            "script_hub": true,
-            "explorer": true,
-            "tabs": true,
-            "auto_inject": true,
-            "multiprocess": false,
-            "debug_console": true
-        },
-        "CORE": {
-            "inject_time": 2,
-            "decompiler":  true,
-            "LIB": {
-                "UNC": 100,
-                "sUNC": 100
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0.434,
-            "notes": [
-                "+Solid quality executor.",
-                "-Tends to crash, a lot.",
-                "-Community can be toxic asf, devs are cool tho."
-            ]
-        }
-    },
-
-    "Macsploit": {
-        "UI": {
-            "script_hub": true,
-            "explorer": true,
-            "tabs": true,
-            "auto_inject": true,
-            "multiprocess": 0.5,
-            "debug_console": false
-        },
-        "CORE": {
-            "inject_time": 5,
-            "decompiler":  true,
-            "LIB": {
-                "UNC": 98,
-                "sUNC": 95
-            }
-        },
-        "INFO": {
-            "daily_pricing": "$9.99/Life",
-            "notes": [
-                "+Best Mac executor. (and basically only)",
-                "-Updates are late.",
-                "-Owner has shady background.",
-                "-Staff are unprofessional."
-            ]
-        }
-    },
-
-    "Solara": {
-        "UI": {
-            "script_hub": false,
-            "explorer": false,
-            "tabs": true,
-            "auto_inject": false,
-            "multiprocess": false,
-            "debug_console": false
-        },
-        "CORE": {
-            "inject_time": 6,
-            "decompiler":  false,
-            "LIB": {
-                "UNC": 66,
-                "sUNC": 55
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0,
-            "notes": [
-                "+Most popular exploit.",
-                "Likely to be unmaintained in the future.",
-                "Large subject and target of many scams.",
-                "-Lacking lots of UI features."
-            ]
-        }
-    },
-
-    "Luna": {
-        "UI": {
-            "script_hub": false,
-            "explorer": true,
-            "tabs": true,
-            "auto_inject": false,
-            "multiprocess": true,
-            "debug_console": false
-        },
-        "CORE": {
-            "inject_time": 0.5,
-            "decompiler":  false,
-            "LIB": {
-                "UNC": 67,
-                "sUNC": 8
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0,
-            "notes": [
-                "+Fast injection.",
-                "-Issues with script execution.",
-                "-Owner has been subject to controversy."
-            ]
-        }
-     },
-
-     "Wave": {
-        "UI": {
-            "script_hub": true,
-            "explorer": true,
-            "tabs": true,
-            "auto_inject": true,
-            "multiprocess": false,
-            "debug_console": true
-        },
-        "CORE": {
-            "inject_time": 6,
-            "decompiler":  true,
-            "LIB": {
-                "UNC": 100,
-                "sUNC": 98
-            }
-        },
-        "INFO": {
-            "daily_pricing": 1.142,
-            "notes": [
-                "-<a class='badtext' href='https://v3rm.net/threads/wave-concerns-fake-drawing-lib-plaintext-passwords-etc.9580/#post-62759'>*Strange* business practices.</a>",
-                "-Freemium almost always down.",
-                "-Staff/Support are unprofessional."
-            ]
-        }
-    },
-
-    "Argon": {
-        "UI": {
-            "script_hub": false,
-            "explorer": true,
-            "tabs": true,
-            "auto_inject": true,
-            "multiprocess": false,
-            "debug_console": 0.5
-        },
-        "CORE": {
-            "inject_time": 3.2,
-            "decompiler":  true,
-            "LIB": {
-                "UNC": 100,
-                "sUNC": 98
-            }
-        },
-        "INFO": {
-            "daily_pricing": 0.00,
-            "notes": [
-                "-Atlantis rebrand.",
-                "-<a class='medtext' href='https://v3rm.net/threads/cw-pie-exec-yoru-as-owner-known-exit-scammer-element-cw-basically-wind-v2.13833/'>OG Owner (Yoru/Lxzp) is shady.</a>",
-                "Now owned by new developers, still has remnants of Atlantis."
-            ]
-        }
+    "INFO": {
+      "daily_pricing": 0.79,
+      "notes": [
+        "+Claims to be undetected for now.",
+        "-Came out of almost nowhere, all of the owners have close to no background except from.. Krampus.",
+        "-Basically Krampus V2, <a class='medtext' href='https://v3rm.net/threads/awp-gg-is-officially-confirmed-to-be-krampus-gg-rebrand.15501/'>V3RM Post.</a>"
+      ]
     }
+  },
+  "Zorara": {
+    "UI": {
+      "script_hub": false,
+      "explorer": false,
+      "tabs": true,
+      "auto_inject": false,
+      "multiprocess": false,
+      "debug_console": false
+    },
+    "CORE": {
+      "inject_time": 12,
+      "decompiler": false,
+      "LIB": {
+        "UNC": 88,
+        "sUNC": 56
+      }
+    },
+    "INFO": {
+      "daily_pricing": 0,
+      "notes": [
+        "-Sells premium keys to skip linkvertise. (?)",
+        "-Owner involved with other questionable figures.",
+        "-Skid of Xeno, gives out \"Zorara\" API."
+      ]
+    }
+  },
+  "Xeno": {
+    "UI": {
+      "script_hub": false,
+      "explorer": true,
+      "tabs": true,
+      "auto_inject": false,
+      "multiprocess": true,
+      "debug_console": false
+    },
+    "CORE": {
+      "inject_time": 4,
+      "decompiler": false,
+      "LIB": {
+        "UNC": 84,
+        "sUNC": 56
+      }
+    },
+    "INFO": {
+      "daily_pricing": 0,
+      "notes": [
+        "+Open-source on <a href='https://github.com/Riz-ve/Xeno'>GitHub</a>.",
+        "Execution can be *iffy*.",
+        "-Missing many important functions."
+      ]
+    }
+  },
+  "Synapse Z": {
+    "UI": {
+      "script_hub": true,
+      "explorer": true,
+      "tabs": true,
+      "auto_inject": true,
+      "multiprocess": false,
+      "debug_console": true
+    },
+    "CORE": {
+      "inject_time": 2,
+      "decompiler": true,
+      "LIB": {
+        "UNC": 100,
+        "sUNC": 100
+      }
+    },
+    "INFO": {
+      "daily_pricing": 0.434,
+      "notes": [
+        "+Solid quality executor.",
+        "-Tends to crash, a lot.",
+        "-Community can be toxic asf, devs are cool tho."
+      ]
+    }
+  },
+  "Macsploit": {
+    "UI": {
+      "script_hub": true,
+      "explorer": true,
+      "tabs": true,
+      "auto_inject": true,
+      "multiprocess": 0.5,
+      "debug_console": false
+    },
+    "CORE": {
+      "inject_time": 5,
+      "decompiler": true,
+      "LIB": {
+        "UNC": 98,
+        "sUNC": 95
+      }
+    },
+    "INFO": {
+      "daily_pricing": "$9.99/Life",
+      "notes": [
+        "+Best Mac executor. (and basically only)",
+        "-Updates are late.",
+        "-Owner has shady background.",
+        "-Staff are unprofessional."
+      ]
+    }
+  },
+  "Solara": {
+    "UI": {
+      "script_hub": false,
+      "explorer": false,
+      "tabs": true,
+      "auto_inject": false,
+      "multiprocess": false,
+      "debug_console": false
+    },
+    "CORE": {
+      "inject_time": 6,
+      "decompiler": false,
+      "LIB": {
+        "UNC": 66,
+        "sUNC": 55
+      }
+    },
+    "INFO": {
+      "daily_pricing": 0,
+      "notes": [
+        "+Most popular exploit.",
+        "Likely to be unmaintained in the future.",
+        "Large subject and target of many scams.",
+        "-Lacking lots of UI features."
+      ]
+    }
+  },
+  "Luna": {
+    "UI": {
+      "script_hub": false,
+      "explorer": true,
+      "tabs": true,
+      "auto_inject": false,
+      "multiprocess": true,
+      "debug_console": false
+    },
+    "CORE": {
+      "inject_time": 0.5,
+      "decompiler": false,
+      "LIB": {
+        "UNC": 67,
+        "sUNC": 8
+      }
+    },
+    "INFO": {
+      "daily_pricing": 0,
+      "notes": [
+        "+Fast injection.",
+        "-Issues with script execution.",
+        "-Owner has been subject to controversy."
+      ]
+    }
+  },
+  "Wave": {
+    "UI": {
+      "script_hub": true,
+      "explorer": true,
+      "tabs": true,
+      "auto_inject": true,
+      "multiprocess": false,
+      "debug_console": true
+    },
+    "CORE": {
+      "inject_time": 6,
+      "decompiler": true,
+      "LIB": {
+        "UNC": 100,
+        "sUNC": 98
+      }
+    },
+    "INFO": {
+      "daily_pricing": 1.142,
+      "notes": [
+        "-<a class='badtext' href='https://v3rm.net/threads/wave-concerns-fake-drawing-lib-plaintext-passwords-etc.9580/#post-62759'>*Strange* business practices.</a>",
+        "-Freemium almost always down.",
+        "-Staff/Support are unprofessional."
+      ]
+    }
+  },
+  "Argon": {
+    "UI": {
+      "script_hub": false,
+      "explorer": true,
+      "tabs": true,
+      "auto_inject": true,
+      "multiprocess": false,
+      "debug_console": 0.5
+    },
+    "CORE": {
+      "inject_time": 3.2,
+      "decompiler": true,
+      "LIB": {
+        "UNC": 100,
+        "sUNC": 98
+      }
+    },
+    "INFO": {
+      "daily_pricing": 0,
+      "notes": [
+        "-Atlantis rebrand.",
+        "-<a class='medtext' href='https://v3rm.net/threads/cw-pie-exec-yoru-as-owner-known-exit-scammer-element-cw-basically-wind-v2.13833/'>OG Owner (Yoru/Lxzp) is shady.</a>",
+        "Now owned by new developers, still has remnants of Atlantis."
+      ]
+    }
+  },
+  "shitsploit": {
+    "UI": {
+      "script_hub": false,
+      "explorer": false,
+      "tabs": false,
+      "auto_inject": false,
+      "multiprocess": false,
+      "debug_console": false
+    },
+    "CORE": {
+      "inject_time": 0,
+      "decompiler": false,
+      "LIB": {
+        "UNC": 0,
+        "sUNC": 0
+      }
+    },
+    "INFO": {
+      "daily_pricing": 0,
+      "notes": [
+        "note"
+      ]
+    }
+  }
 }
