@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="../src/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankor (beta)</title>
-    <link rel="icon" href="../assets/anchor.png">
+    <title>ToolScore - Tool Rating Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <img src="./assets/anchor.png" class="logo-img" alt="Ankor">Ankor
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="/discord">Discord</a></li>
+                <li><button class="cta-button">Get Started</button></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero">
-        <img src="../assets/logo.png" class="fade-in">
-        <p class="subtitle slide-up">The least biased executor rating system.</p>
-        <div class="cta-buttons">
-            <button class="primary-btn pulse" onclick="window.location.href = 'https://ankor.pages.dev/executors/'">Hall of Executors</button>
-            <button class="primary-btn pulse" onclick="window.location.href = 'https://ankor.pages.dev/discord'">Discord Server</button>
-            <button class="secondary-btn" onclick="alert('im too FUCKING LAZY to actually finish the page for this so just go to the discord instead and ask me to explain.'); window.location.href = 'https://ankor.pages.dev/discord'">Learn More</button>
-            <button class="secondary-btn" onclick="window.location.href = 'https://ankor.pages.dev/api/'">View API</button>
+        <div class="hero-content">
+            <h1>Discover the best exploits with <span class="gradient-text">Ankor</span>.</h1>
+            <p>Your trusted platform for ROBLOX executor ratings.</p>
+            <div class="hero-buttons">
+                <button onclick="location.href = 'executors'" class="primary-button">Executor List</button>
+                <button onclick="location.href = 'info'" class="secondary-button">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <span id="toolsamount" class="stat-number"></span>
+                <span class="stat-label">Tools Maintained</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">1578</span>
+                <span class="stat-label">Server Members</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Avg Rating</span>
+            </div>
         </div>
     </header>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Ankor</h4>
-                <p>(pronounced like "anchor")</p>
-                <p>the future of exploit rating systems</p>
+    <section id="features" class="features">
+        <h2>Why Choose <span class="gradient-text">Ankor</span></h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Completely Unbiased</h3>
+                <p>Automated reviews calculated on the fly, collected by simple d</p>
             </div>
-            <div class="footer-section">
-                <h4>Links</h4>
-                <li><a href="../discord/">Discord</a></li>
-                <li><a href="../api/">API</a></li>
-                <li><a href="../api/docs">Docs</a></li>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Deep Reporting</h3>
+                <p>Comprehensive reports and statistics for each tool.</p>
             </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>@shall0e on Discord</p>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Live Updates</h3>
+                <p>Real-time ratings and latest tool updates.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Community Driven</h3>
+                <p>Powered by developers and tech enthusiasts like you.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Ankor (Anker please dont sue!)</p>
-        </div>
-    </footer>
-    <script src="../src/main.js"></script>
-</body>
+    </section>
 
+    <script src="script.js"></script>
+</body>
 </html>
