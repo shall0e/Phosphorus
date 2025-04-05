@@ -213,7 +213,7 @@ addEventListener('fetch', event => {
     return hash;
   }
   
-  async function handleRequest(request) {
+  async function onRequest(request) {
     arequest = request
   
     function getNestedValue(obj, path) {
